@@ -10,3 +10,4 @@ python-dotenv
 flask_cors
 pandas
 fuzzywuzzy
+scipy
