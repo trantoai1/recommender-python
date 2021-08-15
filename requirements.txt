@@ -11,3 +11,4 @@ flask_cors
 pandas
 fuzzywuzzy
 scipy
+sklearn
