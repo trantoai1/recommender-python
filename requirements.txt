@@ -1,0 +1,11 @@
+django
+gunicorn
+django-heroku
+psycopg2
+flask
+flask_restful
+dnspython
+Flask-JWT
+python-dotenv
+flask_cors
+pandas

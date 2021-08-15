@@ -1,0 +1,10 @@
+id,name,unit
+GPU,Graphics,
+RAM,RAM,GB
+YEAR,Year,
+RESOLUTION,Resolution,
+CPU,Processor,
+ROM,Storage,
+ROMSSD,Storage SSD,
+MONITOR,Screen Size,
+COLOR,Color,
