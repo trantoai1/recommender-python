@@ -6,7 +6,7 @@ load_dotenv()
 URL = os.getenv('url')
 database = os.getenv('database')
 username = os.getenv('username')
-password = os.getenv('')
+password = os.getenv('password')
 conn = connect(
     host=URL,
     database=database,

@@ -71,7 +71,7 @@ def make_recommendation(fav_product,model_knn=model_knn,
     data=csr_matrix(df_product_features.values),
 
     mapper=products_to_idx,
-    n_recommendations=10):
+    n_recommendations=6):
     """
     return top n similar movie recommendations based on user's input movie
 
@@ -117,7 +117,10 @@ def make_recommendation(fav_product,model_knn=model_knn,
         filter.append(reverse_mapper[idx])
 
 
-    newproduct = pd.read_sql_query("""SELECT * FROM products where name IN %s""", conn,params=(tuple(filter),))
+    newproduct = pd.read_sql_query("""SELECT p.*
+    ,(SELECT img.url FROM image img WHERE p.id=img.product_id limit 1) as image
+    ,(SELECT cate.cate_name FROM categories cate WHERE p.category_id=cate.id) as cateName
+      FROM products p where p.name IN %s """, conn,params=(tuple(filter),))
 
     return newproduct.reset_index().to_json(orient='records')
 
