@@ -9,3 +9,4 @@ Flask-JWT
 python-dotenv
 flask_cors
 pandas
+fuzzywuzzy
